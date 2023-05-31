@@ -2,19 +2,18 @@
     <main class="main">
         <div class="header">
             <input type="search" class="search" v-model="search">
-            <div class="filter">
-                <button class="filter-btn" @click="filter" id="oto">отовичанин</button>
-                <button class="filter-btn" @click="filter" id="bar">барсогорец</button>
-            </div>
+<!--            <div class="filter">-->
+<!--                <button class="filter-btn" @click="filter" id="oto">отовичанин</button>-->
+<!--                <button class="filter-btn" @click="filter" id="bar">барсогорец</button>-->
+<!--            </div>-->
         </div>
         <div class="cards">
             <CardComp v-for="card in searchCards" :key="card.id"
                       :name="card.name"
                       :lastname="card.lastname"
                       :user_id="card.passport"
-                      :nat="card.nat"
-                      :gunlic="card.gunlic"
-                      :crime="card.crime"
+                      :nat="card.nationality"
+                      :registration="card.registration"
                       :image="card.image"
                       :pk="card.id"
             />

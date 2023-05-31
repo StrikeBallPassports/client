@@ -1,12 +1,11 @@
 <template>
     <div class="card" @click="$router.push(`/profile/${pk}`)">
-        <img :src="image" alt="" class="img">
+        <img :src="`http://localhost:8000/api/v1/users/${image}`" alt="" class="img">
         <div class="name">{{ name }}</div>
         <div class="lastname">{{ lastname }}</div>
         <div class="user_id">{{ user_id }}</div>
         <div class="nat">{{ nat }}</div>
-        <div class="gunlic">{{ gunlic }}</div>
-        <div class="crime">{{ crime }}</div>
+        <div class="registration">{{ registration }}</div>
     </div>
 </template>
 
@@ -18,8 +17,7 @@ export default {
         lastname: String,
         user_id: String,
         nat: String,
-        gunlic: String,
-        crime: String,
+        registration: String,
         image: String,
         pk: Number
     }
